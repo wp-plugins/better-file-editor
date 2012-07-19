@@ -1,13 +1,44 @@
 === Better File Editor ===
-Contributors: logikal16
-Donate link: http://pods.uproot.us
+Contributors: bpetty, logikal16
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=bryan%40ibaku%2enet&item_name=WordPress%20Better%20File%20Editor%20Plugin
 Tags: plugin, theme, editor, code, syntax, highlighter
-Requires at least: 2.7
-Tested up to: 2.8
-Stable tag: trunk
+Version: 2.0
+Requires at least: 3.2
+Tested up to: 3.4
+Stable tag: 2.0
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Edit theme or plugin files directly from the admin interface using Mozilla's Bespin editor.
+Adds line numbers, syntax highlighting, code folding, and lots more to the
+theme and plugin editors in the admin panel.
 
 == Description ==
 
-Edit theme or plugin files directly from the admin interface using Mozilla's Bespin editor.
+Adds line numbers, syntax highlighting, code folding, and lots more to the
+theme and plugin editors in the admin panel.
+
+This plugin replaces the boring, clunky, and difficult to use theme and plugin
+editor with a full-featured code editor using the Ajax.org Cloud9 Editor.
+
+Requirements:
+
+* Javascript Enabled (will use simple editor if disabled)
+* Browsers:
+
+== Installation ==
+
+1. Upload the entire `better-file-editor` folder to the `/wp-content/plugins/`
+   directory.
+2. Activate the plugin through the 'Plugins' menu in WordPress.
+
+== Changelog ==
+
+= 2.0 =
+* Complete rewrite built on Ajax.org Cloud9 Editor, and replacing official
+  plugin and theme editors rather than adding extra stand-alone editor.
+
+= 1.0.1 =
+* Include local copy of Bespin editor JS rather than hotlinking from Mozilla.
+
+= 1.0 =
+* Initial release based on Mozilla's Bespin editor.
