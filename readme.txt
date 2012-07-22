@@ -1,9 +1,9 @@
 === Better File Editor ===
-Contributors: bpetty, logikal16
+Contributors: bpetty
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=bryan%40ibaku%2enet&item_name=WordPress%20Better%20File%20Editor%20Plugin
 Tags: plugin, theme, editor, code, syntax, highlighter
 Version: 2.0
-Requires at least: 3.2
+Requires at least: 2.8
 Tested up to: 3.4
 Stable tag: 2.0
 License: GPLv2 or later

@@ -306,6 +306,13 @@ wp_session.setMode(wp_mode.mode);
 wp_session.setUseSoftTabs(false);
 var wp_session = env.split.setSession(wp_session);
 
+// Tie in the form submission event so that we can copy the document back
+// to the official form input WordPress is expecting the new source to be in.
+jQuery('#template').submit(function () {
+	textarea.value = wp_session.getValue();
+	return true;
+});
+
 
 
 /*********** manage layout ***************************/
