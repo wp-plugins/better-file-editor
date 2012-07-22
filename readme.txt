@@ -22,14 +22,18 @@ editor with a full-featured code editor using the Ajax.org Cloud9 Editor.
 
 Requirements:
 
-* Javascript Enabled (will use simple editor if disabled)
-* Browsers:
+* Javascript Enabled (will use default editor if disabled)
+* Browsers: Internet Explorer 9+, Chrome 15+, Firefox 3.6+, Safari 5.0+
 
 == Installation ==
 
 1. Upload the entire `better-file-editor` folder to the `/wp-content/plugins/`
    directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
+
+== Screenshots ==
+
+1. Theme Editor
 
 == Changelog ==
 

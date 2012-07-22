@@ -148,57 +148,62 @@ jQuery('#newcontent').parent().attr('id', 'editor');
 
 jQuery('#newcontent').after('\
 <div id="wp-ace-editor-controls">\
-	<ul>\
-		<li>\
-			<select id="editor_theme" size="1">\
-				<option value="ace/theme/chrome">Chrome</option>\
-				<option value="ace/theme/clouds">Clouds</option>\
-				<option value="ace/theme/clouds_midnight">Clouds Midnight</option>\
-				<option value="ace/theme/cobalt">Cobalt</option>\
-				<option value="ace/theme/crimson_editor">Crimson Editor</option>\
-				<option value="ace/theme/dawn">Dawn</option>\
-				<option value="ace/theme/dreamweaver">Dreamweaver</option>\
-				<option value="ace/theme/eclipse">Eclipse</option>\
-				<option value="ace/theme/idle_fingers">idleFingers</option>\
-				<option value="ace/theme/kr_theme">krTheme</option>\
-				<option value="ace/theme/merbivore">Merbivore</option>\
-				<option value="ace/theme/merbivore_soft">Merbivore Soft</option>\
-				<option value="ace/theme/mono_industrial">Mono Industrial</option>\
-				<option value="ace/theme/monokai">Monokai</option>\
-				<option value="ace/theme/pastel_on_dark">Pastel on dark</option>\
-				<option value="ace/theme/solarized_dark">Solarized Dark</option>\
-				<option value="ace/theme/solarized_light">Solarized Light</option>\
-				<option value="ace/theme/textmate" selected="selected">TextMate</option>\
-				<option value="ace/theme/twilight">Twilight</option>\
-				<option value="ace/theme/tomorrow">Tomorrow</option>\
-				<option value="ace/theme/tomorrow_night">Tomorrow Night</option>\
-				<option value="ace/theme/tomorrow_night_blue">Tomorrow Night Blue</option>\
-				<option value="ace/theme/tomorrow_night_bright">Tomorrow Night Bright</option>\
-				<option value="ace/theme/tomorrow_night_eighties">Tomorrow Night 80s</option>\
-				<option value="ace/theme/vibrant_ink">Vibrant Ink</option>\
-			</select>\
-		</li>\
-		<li>\
-			<select id="fontsize" size="1">\
-				<option value="10px">10px</option>\
-				<option value="11px">11px</option>\
-				<option value="12px" selected="selected">12px</option>\
-				<option value="14px">14px</option>\
-				<option value="16px">16px</option>\
-				<option value="20px">20px</option>\
-				<option value="24px">24px</option>\
-			</select>\
-		</li>\
-		<li>\
-			<input type="checkbox" name="show_hidden" id="show_hidden">Visible Whitespace</input>\
-		</li>\
-		<li>\
-			<input type="checkbox" id="show_gutter" checked>Show Gutter</input>\
-		</li>\
-		<li>\
-			<input type="checkbox" id="show_print_margin" checked>Show Ruler</input>\
-		</li>\
-	</ul>\
+	<table>\
+		<tr>\
+			<td>\
+				<label for="editor_theme">Theme:</label>\
+				<select id="editor_theme" size="1">\
+					<option value="ace/theme/chrome">Chrome</option>\
+					<option value="ace/theme/clouds">Clouds</option>\
+					<option value="ace/theme/clouds_midnight">Clouds Midnight</option>\
+					<option value="ace/theme/cobalt">Cobalt</option>\
+					<option value="ace/theme/crimson_editor">Crimson Editor</option>\
+					<option value="ace/theme/dawn">Dawn</option>\
+					<option value="ace/theme/dreamweaver">Dreamweaver</option>\
+					<option value="ace/theme/eclipse">Eclipse</option>\
+					<option value="ace/theme/idle_fingers">idleFingers</option>\
+					<option value="ace/theme/kr_theme">krTheme</option>\
+					<option value="ace/theme/merbivore">Merbivore</option>\
+					<option value="ace/theme/merbivore_soft">Merbivore Soft</option>\
+					<option value="ace/theme/mono_industrial">Mono Industrial</option>\
+					<option value="ace/theme/monokai">Monokai</option>\
+					<option value="ace/theme/pastel_on_dark">Pastel on dark</option>\
+					<option value="ace/theme/solarized_dark">Solarized Dark</option>\
+					<option value="ace/theme/solarized_light">Solarized Light</option>\
+					<option value="ace/theme/textmate" selected="selected">TextMate</option>\
+					<option value="ace/theme/twilight">Twilight</option>\
+					<option value="ace/theme/tomorrow">Tomorrow</option>\
+					<option value="ace/theme/tomorrow_night">Tomorrow Night</option>\
+					<option value="ace/theme/tomorrow_night_blue">Tomorrow Night Blue</option>\
+					<option value="ace/theme/tomorrow_night_bright">Tomorrow Night Bright</option>\
+					<option value="ace/theme/tomorrow_night_eighties">Tomorrow Night 80s</option>\
+					<option value="ace/theme/vibrant_ink">Vibrant Ink</option>\
+				</select>\
+			</td>\
+			<td>\
+				<label for="fontsize">Font Size:</label>\
+				<select id="fontsize" size="1">\
+					<option value="10px">10px</option>\
+					<option value="11px">11px</option>\
+					<option value="12px" selected="selected">12px</option>\
+					<option value="14px">14px</option>\
+					<option value="16px">16px</option>\
+				</select>\
+			</td>\
+			<td>\
+				<input type="checkbox" id="show_print_margin" checked />\
+				<label for="show_print_margin">Show Ruler</label>\
+			</td>\
+			<td>\
+				<input type="checkbox" id="show_gutter" checked />\
+				<label for="show_gutter">Show Gutter</label>\
+			</td>\
+			<td>\
+				<input type="checkbox" name="show_hidden" id="show_hidden" />\
+				<label for="show_hidden">Visible Whitespace</label>\
+			</td>\
+		</tr>\
+	</table>\
 </div>\
 <div id="wp-ace-editor"></div>\
 ');
@@ -304,20 +309,14 @@ var wp_session = env.split.setSession(wp_session);
 
 
 /*********** manage layout ***************************/
-// var consoleHight = 20;
-// function onResize() {
-//     var left = env.split.$container.offsetLeft;
-//     var width = document.getElementById("editor").clientWidth - left;
-//     container.style.width = width + "px";
-//     container.style.height = document.documentElement.clientHeight - consoleHight + "px";
-//     env.split.resize();
 
-//     consoleEl.style.width = width + "px";
-//     cmdLine.resize()
-// }
+function onResize() {
+	env.split.resize();
+	cmdLine.resize()
+}
 
-// window.onresize = onResize;
-// onResize();
+window.onresize = onResize;
+onResize();
 
 /*********** options pane ***************************/
 var themeEl = document.getElementById("editor_theme");
