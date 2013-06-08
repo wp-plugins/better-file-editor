@@ -19,14 +19,18 @@ class BetterFileEditorPlugin {
 
 	function admin_footer() {
 		?>
-		<script src="<?php echo plugins_url( 'js/ace/ace.js' , __FILE__ ); ?>"
-			type="text/javascript" charset="utf-8"></script>
-		<script src="<?php echo plugins_url( 'js/wp-ace.js' , __FILE__ ); ?>"></script>
+		<script src="<?php echo plugins_url( 'js/require.js' , __FILE__ ); ?>"></script>
+		<script src="<?php echo plugins_url( 'js/ace/ace.js' , __FILE__ ); ?>"></script>
+		<script src="<?php echo plugins_url( 'js/ace/ext-modelist.js' , __FILE__ ); ?>"></script>
 		<script type="text/javascript" charset="utf-8">
 			jQuery(document).ready(function() {
 				if(!jQuery.browser.msie || (jQuery.browser.version != '6.0' &&
-					jQuery.browser.version != '7.0' && jQuery.browser.version != '8.0')) {
-					require("wp-ace");
+					jQuery.browser.version != '7.0' && jQuery.browser.version != '8.0'))
+				{
+					var wpacejs = document.createElement('script');
+					wpacejs.type = 'text/javascript'; wpacejs.charset = 'utf-8';
+					wpacejs.src = '<?php echo plugins_url( "js/wp-ace.js" , __FILE__ ); ?>';
+					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wpacejs, s);
 				}
 			});
 		</script>
