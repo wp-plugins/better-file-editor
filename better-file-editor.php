@@ -3,7 +3,7 @@
 Plugin Name: Better File Editor
 Plugin URI: http://wordpress.org/extend/plugins/better-file-editor/
 Description: Adds line numbers, syntax highlighting, code folding, and lots more to the theme and plugin editors in the admin panel.
-Version: 2.0
+Version: 2.1
 Author: Bryan Petty <bryan@ibaku.net>
 Author URI: http://profiles.wordpress.org/bpetty/
 License: GPLv2 or later
