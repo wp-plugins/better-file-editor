@@ -105,8 +105,10 @@ editor.selection.clearSelection();
 editor.selection.moveCursorFileStart();
 if( localStorage ) {
 	var cursor_positions = JSON.parse( localStorage.getItem( 'cursor_positions' ) );
-	if( typeof cursor_positions == undefined ) { cursor_positions = {}; }
-	if( cursor_positions[filename] ) {
+	if( ( typeof cursor_positions === undefined ) || cursor_positions === null ) {
+        cursor_positions = {};
+    }
+	if( filename in cursor_positions ) {
 		var pos = cursor_positions[filename];
 		var offset = pos.row - 10;
 		if( offset < 0 ) offset = 0;
