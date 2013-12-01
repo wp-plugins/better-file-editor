@@ -2,10 +2,10 @@
 Contributors: bpetty
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=bryan%40ibaku%2enet&item_name=WordPress%20Better%20File%20Editor%20Plugin
 Tags: plugin, theme, editor, code, syntax, highlighter
-Version: 2.1.1
+Version: 2.1.2
 Requires at least: 2.8
-Tested up to: 3.5
-Stable tag: 2.1.1
+Tested up to: 3.8
+Stable tag: 2.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -166,22 +166,27 @@ Supported Languages:
 
 == Changelog ==
 
-= 2.1 =
+= 2.1.2 (2013-12-01) =
+
+* Editor enabled based on support for HTML5 Canvas API, which removed
+  dependency on jQuery migrate layer for browser sniffing.
+
+= 2.1 (2013-06-08) =
 
 * Updated ACE editor with new themes and syntax modes.
 * New Themes: Ambiance, Chaos, Terminal, Xcode
 * New Notable Modes: INI, Dart, ActionScript, MySQL, SASS, and HAML.
 * Saves cursor position in file.
 
-= 2.0 =
+= 2.0 (2012-07-22) =
 
 * Complete rewrite built on Ajax.org Cloud9 Editor, and replacing official
   plugin and theme editors rather than adding extra stand-alone editor.
 
-= 1.0.1 =
+= 1.0.1 (2009-12-19) =
 
 * Include local copy of Bespin editor JS rather than hotlinking from Mozilla.
 
-= 1.0 =
+= 1.0 (2009-06-13) =
 
 * Initial release based on Mozilla's Bespin editor.

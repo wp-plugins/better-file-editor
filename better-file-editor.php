@@ -3,7 +3,7 @@
 Plugin Name: Better File Editor
 Plugin URI: http://wordpress.org/extend/plugins/better-file-editor/
 Description: Adds line numbers, syntax highlighting, code folding, and lots more to the theme and plugin editors in the admin panel.
-Version: 2.1.1
+Version: 2.1.2
 Author: Bryan Petty <bryan@ibaku.net>
 Author URI: http://profiles.wordpress.org/bpetty/
 License: GPLv2 or later
@@ -24,8 +24,12 @@ class BetterFileEditorPlugin {
 		<script src="<?php echo plugins_url( 'js/ace/ext-modelist.js' , __FILE__ ); ?>"></script>
 		<script type="text/javascript" charset="utf-8">
 			jQuery(document).ready(function() {
-				if(!jQuery.browser.msie || (jQuery.browser.version != '6.0' &&
-					jQuery.browser.version != '7.0' && jQuery.browser.version != '8.0'))
+				/**
+				 * Detecting the HTML5 Canvas API (usually) gives us IE9+ and
+				 * of course all modern browsers. This should be adequate for
+				 * minimum requirements instead of browser sniffing.
+				 */
+				if(!!document.createElement('canvas').getContext)
 				{
 					var wpacejs = document.createElement('script');
 					wpacejs.type = 'text/javascript'; wpacejs.charset = 'utf-8';
