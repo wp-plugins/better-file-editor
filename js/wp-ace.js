@@ -22,6 +22,8 @@ newcontent.after('\
 				<option value="ace/theme/dreamweaver">Dreamweaver</option>\
 				<option value="ace/theme/eclipse">Eclipse</option>\
 				<option value="ace/theme/github">GitHub</option>\
+				<option value="ace/theme/katzenmilch">KatzenMilch</option>\
+				<option value="ace/theme/kuroir">Kuroir</option>\
 				<option value="ace/theme/solarized_light">Solarized Light</option>\
 				<option value="ace/theme/textmate" selected="selected">TextMate</option>\
 				<option value="ace/theme/tomorrow">Tomorrow</option>\
